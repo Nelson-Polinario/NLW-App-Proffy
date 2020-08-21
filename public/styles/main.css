@@ -1,0 +1,84 @@
+/*CSS =
+Cascandian
+Style 
+Sheet
+
+#n matches the use of the attribute id="n , that is, name do id", what is
+placed like this: <body id-"n">. In tha way, the #n will apply a color to all body.
+
+.n is the reference when you color via the class attribute and use it in several elements,
+for example, <h1 class="n"> will transform the h1 into the color that I assign to n 
+        
+STRENGTHS: id stronger than class. However the cascade effect is stronger*/
+
+:root { /*root corresponds to the creation of information at the root ofCSS*/
+    /*dashes -o-animation-delay: ; before the color is to be able to use it as var*/
+    --color-background: #F0F0F7; 
+    --color-primary-lighter: #9871F5;
+    --color-primary-light: #916BEA;
+    --color-primary: #8257E5;
+    --color-primary-dark: #774DD6;
+    --color-primary-darker: #6842c2;
+    --color-secondary: #04D361;
+    --color-secondary-dark: #04BF58;
+    --color-title-in-primary: #FFFFFF;
+    --color-text-in-primary: #D4C2FF;
+    --color-text-title: #32264D;
+    --color-text-complement: #9C98A6;
+    --color-text-base: #6A6180;
+    --color-line-in-white: #E6E6F0;
+    --color-input-background: #F8F8FC;
+    --color-button-text: #FFFFFF;
+    --color-box-base: #FFFFFF;
+    --color-box-footer: #FAFAFC;
+    --color-small-info: #C1BCCC;
+         /*default font size is 16px, 100% or 1rem: all match
+         at the same size, changing only the "how" to write
+         IMPROTANT: the rem and relates to the font size written in root,
+         so 2rem will be 2 times the value of the font-size described in the root*/
+    font-size: 60%;
+         /*the percentage is always related to the parent tag, that is, the h1 will have
+         its font-size related to that of the body*/
+}
+        
+*{ /* the * means any element and serves to clear the design HTML*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* makes the box size defined by the border*/
+}
+
+html, 
+body { 
+    height: 100vh; /*viewport higth, divide the screen into 100 pieces high*/
+}
+
+body {
+    background-color: var(--color-background);
+    display: flex; /*changes the pattern and places items that take up an entire row,
+                    occupying only part of the line*/
+    align-items: center;
+    justify-content: center;
+}
+
+body, 
+input, 
+button, 
+textarea {
+    /*font: 500 1.6rem Poppins; RESUMED FORM*/
+    font-weight: 500;
+    font-size: 1.6rem;
+    font-family: Poppins;
+    color: var(--color-text-base);
+}
+
+#container{/*box model*/
+    width: 90vw; /*occupies only 90*/ 
+    max-width: 700px; /*box width limit*/
+}
+
+@media (min-width: 700px){
+    :root {
+        font-size: 62.5%; /*is equivalent to 10px, as the default 100% is 16px*/
+    }
+
+}
